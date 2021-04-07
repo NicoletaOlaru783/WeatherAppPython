@@ -1,1 +1,1 @@
-token = '6Ip1brJFufrqGHAp6Dul3fRJ9DIcIftZ'
+token = 'Add your token here from accuweather'
