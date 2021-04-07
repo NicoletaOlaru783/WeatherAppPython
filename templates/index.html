@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="container my-5 mx-auto">
+        <h1 class="text-center my-4">Wheater App</h1>
+        <div class="card shadow-lg rounded" style="height: 800px; background-image: url({{ isDayTime }})">
+
+            <div class="container weather">
+                <div class=" icon bg-light mx-auto text-center">
+                    <img src="{{ weatherIcon }}" alt="">
+                </div>
+                <div class="text-uppercase text-center detail">
+                    <h5>{{ cityName }}</h5>
+                    <div class="display-temp">
+                        <span>
+                            {{ temperature }}&deg;C
+                        </span>
+                    </div>
+                    <div style="padding-top:10px;">
+                        {{ todayIs }}
+                    </div>
+                    <div style="padding-bottom:10px;">
+                        {{ todayDate }}
+                    </div>
+                </div>
+            </div>
+
+            <form class="change-location my-4 text-center" action="/" method="POST">
+                <label for="city">Enter a location for weather information</label>
+                <input type="text" name="cityEntered" class="form-control p-4">
+            </form>
+
+
+            <div class="nextDays">
+                    {% for day in forcast5Days['DailyForecasts'] %}
+                <div class="wrapper">
+                    <div class="dayText" style="padding-top: 5px;">
+                        {{ day['Date'] }}
+                    </div>
+                    <div class="dayIcon">
+                        <img style="width: 70px; object-fit: none; object-position: top;" src="{{ day['Day']['Icon'] }}" alt="">
+                    </div>
+                    <div class="dayText" style="padding-bottom: 5px;">
+                        {{ day['Temperature']['Maximum']['Value'] }}&deg;C
+                     </div>
+                 </div>
+                    {% endfor %}
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>

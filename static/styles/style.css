@@ -1,0 +1,81 @@
+body {
+    background: #eeedec;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+    color: #f8f9fa;
+    background-image: linear-gradient(to right bottom, #f0af7a, #e472a3, #758be2);
+}
+
+.container {
+    max-width: 450px;
+}
+
+.weather {
+    width: 53%;
+    border-radius: 20px;
+    left: 30px;
+    top: 30px;
+    position: absolute;
+    box-shadow: 6px 4px 10px #ffffff40;
+}
+
+.icon {
+    position: relative;
+    border-radius: 50px;
+    width: 100px;
+    top: 20px;
+}
+
+.nextDays {
+    padding-left: 9px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+.dayIcon {
+    color: white;
+    text-align: center;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(102%) contrast(101%);
+}
+
+.dayText {
+    color: white;
+    text-align: center;
+}
+
+.wrapper {
+    display: inline-block;
+    border-radius: 20px;
+    padding-left: 6px;
+    box-shadow: 4px 2px 5px #ffffff40;
+}
+
+.form-control {
+    width: 60%;
+    display: inline;
+    background-color: #ffffff05;
+    color: #f8f9fa;
+    border: 0;
+    box-shadow: 4px 2px 5px #ffffff40;
+}
+
+    .form-control:focus {
+        background-color: #886f97c2;
+        color: #f8f9fa;
+    }
+
+.change-location {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+}
+
+h5 {
+    margin-top: 35px;
+}
+
+.display-temp {
+    font-size: 60px;
+    line-height: 60px;
+}
